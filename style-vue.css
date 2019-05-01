@@ -26,13 +26,20 @@ body {
   padding: 10px;
 }
 
-img {
+img, .icon {
   border: 10px solid white;
   border-bottom: 30px solid white;
   width: 240px;
   height: 160px;
 }
 
+.icon {
+  background-image: url("rocket.svg");
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-color: white;
+  background-size: cover;
+}
 
 
 

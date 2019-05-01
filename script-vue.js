@@ -3,8 +3,7 @@ var app = new Vue({
   data: {
     lastLaunches: [],
     limitNumber: 3,
-    counter: 0,
-
+    counter: 0
   },
   mounted() {
     axios

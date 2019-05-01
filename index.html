@@ -14,7 +14,9 @@
 <body>
   <div id="app">
     <div class="rocket-units" v-for="rocket, index in lastLaunches">
-      <img v-bind:src=lastLaunches[index].links.flickr_images[0]>
+      <img v-if=lastLaunches[index].links.flickr_images[0] v-bind:src=lastLaunches[index].links.flickr_images[0]>
+      <!-- back up icon if the image not available -->
+      <img v-else class="icon">
       <p>Mission Name: {{ lastLaunches[index].mission_name }}</p>
       <p>Year: {{ lastLaunches[index].launch_year }} </p>
       <p>Date: {{ lastLaunches[index].launch_date_local.slice(0, 10) }}</p>
