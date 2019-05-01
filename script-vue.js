@@ -17,7 +17,6 @@ var app = new Vue({
           if (this.counter == this.limitNumber) {
             break;
           }
-          
         }
       })
       .catch(function (err) {
