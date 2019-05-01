@@ -38,9 +38,7 @@ img:hover {
 }
 
 .icon {
-  background-image: url("rocket.svg");
-  background-size: cover;
-  background-repeat: no-repeat; 
-  background-color: white;
-  background-size: cover;
+  background: url("rocket.svg") center no-repeat;
+  background-size: contain;
+  background-color: white; 
 }
