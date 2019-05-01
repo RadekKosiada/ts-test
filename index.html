@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TS Test</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div id="app">
-     
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>TS Test Vue.js</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style-vue.css">
+</head>
+
+<body>
+  <div id="app">
+    <div v-for="rocket, index in lastLaunches">
+      <img v-bind:src=lastLaunches[index].links.flickr_images[0]>
+      <p>Mission Name: {{ lastLaunches[index].mission_name }}</p>
+      <p>Year: {{ lastLaunches[index].launch_year }} </p>
+      <p>Date: {{ lastLaunches[index].launch_date_local }}</p>
+      <p>Rocket Name: {{ lastLaunches[index].rocket.rocket_name }}</p>
+      <p>Rocket Type: {{ lastLaunches[index].rocket.rocket_type }}</p>
+      <p>Launch Site: {{ lastLaunches[index].launch_site.site_name_long }}</p>
     </div>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script> 
-    <script src="script-vue.js" async defer></script>
-  </body>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="script-vue.js" async defer></script>
+</body>
+
 </html>
