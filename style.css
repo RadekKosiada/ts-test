@@ -22,7 +22,7 @@
   padding: 15px;
 }
 
-img {
+img, .icon {
   display: block;
   margin: 0 auto;
   width: 100%;
@@ -37,3 +37,10 @@ img:hover {
   box-shadow: 4px 4px 8px grey;
 }
 
+.icon {
+  background-image: url("rocket.svg");
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-color: white;
+  background-size: cover;
+}

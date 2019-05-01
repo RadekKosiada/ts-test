@@ -44,10 +44,20 @@
                 imgDiv.setAttribute("class", "img-div")
                 allContentUnits[i].appendChild(imgDiv);
 
-                // img tag 
-                let rocketImg = document.createElement("img");
-                rocketImg.setAttribute("src", latestLaunchesArr[i].links.flickr_images[0]);
-                imgDiv.appendChild(rocketImg);
+                // img tag   
+                //if img available in the data - display image             
+                if(latestLaunchesArr[i].links.flickr_images[0]) {
+                    let rocketImg = document.createElement("img");
+                    rocketImg.setAttribute("src", latestLaunchesArr[i].links.flickr_images[0]);
+                    imgDiv.appendChild(rocketImg);
+                //else use a backup icon
+                } else {
+                    let icon = document.createElement("div");
+                    icon.setAttribute("class", "icon");
+                    imgDiv.appendChild(icon);
+                }
+                
+                
 
                 // p tags with respective info
                 let missionName = document.createElement("p");
