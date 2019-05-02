@@ -17,9 +17,8 @@ I added some basic CSS styling to better differentiate them from one another  i.
 
 Please see respective screen shots on both branches.
 
-[master]: https://www.screencast.com/t/PLToUuQq
-[vue-solution]: https://www.screencast.com/t/3ayXa3Mb5
-
+[master]: https://www.screencast.com/t/PLToUuQq	"master"
+[vue-solution]: https://www.screencast.com/t/3ayXa3Mb5	"vue-solution"
 
 
 ### Images
@@ -41,9 +40,8 @@ function getRockets(number) {
 .
 .
  if (counter === number) {
-				break;
-			}
-
+	break;
+	}
 .
 .
 }
@@ -60,7 +58,19 @@ The edge-case would need to be addressed when the number passed is higher than t
 
 ##### Vue-solution
 
-Since the  limitNumber is defined in the Vue data object it could be adjusted i. e. with an additional input in which user type a number; Similarly as in plan JS an error message might needed to be added.
+Since the  limitNumber is defined in the Vue data object it could be adjusted i. e. with an additional input in which user types a number; Similarly as in plan JS an error message might needed to be added.
+
+```
+var app = new Vue({
+  el: '#app',
+  data: {
+    //defining an empty array to push most recent launches
+    lastLaunches: [],
+    //defining how many launches we want to display
+    limitNumber: 3,
+    counter: 0
+  },
+```
 
 
 
