@@ -3,6 +3,7 @@
 (function () {
     //defining an empty array to push latest launches
     let latestLaunchesArr = [];
+    //using fetch() supported by all evergreen browsers https://caniuse.com/#search=fetch
     fetch("https://api.spacexdata.com/v3/launches/past")
         .then(function (response) {
             return response.json();
