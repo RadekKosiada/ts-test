@@ -1,4 +1,5 @@
 
+//putting everything in an iife not to 'pollute' the global scope
 (function () {
     //defining an empty array to push latest launches
     let latestLaunchesArr = [];
@@ -7,7 +8,6 @@
             return response.json();
         })
         .then(function (data) {
-
             //counter to limit the launches
             let counter = 0;
             //looping through the data array, backwards as we want the latest (last) launches
@@ -26,9 +26,7 @@
             mainContent.setAttribute("id", "main-content")
             document.body.appendChild(mainContent);
 
-            console.log(latestLaunchesArr[0]);
-
-            // looping through all the launches
+            // looping through the array of all launches 
             for (let i = 0; i < latestLaunchesArr.length; i++) {
                 // content units to display single launch, for styling
                 let contentUnits = document.createElement("div");
@@ -37,7 +35,6 @@
 
                 // grabbing all single units in a variable, to loop through them as a NodeList and append each launch to single one of them
                 let allContentUnits = document.querySelectorAll(".rocket-units");
-                console.log(allContentUnits);
 
                 // img div for styling
                 let imgDiv = document.createElement("div");
@@ -55,10 +52,8 @@
                     let icon = document.createElement("div");
                     icon.setAttribute("class", "icon");
                     imgDiv.appendChild(icon);
-                }
+                }             
                 
-                
-
                 // p tags with respective info
                 let missionName = document.createElement("p");
                 missionName.innerHTML = "<span class='title'>Mission Name: </span>" + latestLaunchesArr[i].mission_name;
